@@ -1,4 +1,6 @@
 Siteseer::Application.routes.draw do
+  resources :parties
+
   resources :locations
 
   # The priority is based upon order of creation:

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  owner: MyString
+  start_time: 2012-04-16 16:17:39
+  end_time: 2012-04-16 16:17:39
+
+two:
+  title: MyString
+  owner: MyString
+  start_time: 2012-04-16 16:17:39
+  end_time: 2012-04-16 16:17:39

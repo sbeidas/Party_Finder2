@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120410045329) do
+ActiveRecord::Schema.define(:version => 20120416211739) do
 
   create_table "checkins", :force => true do |t|
     t.string   "title"
@@ -33,6 +33,15 @@ ActiveRecord::Schema.define(:version => 20120410045329) do
     t.string   "address"
     t.float    "latitude"
     t.float    "longitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "parties", :force => true do |t|
+    t.string   "title"
+    t.string   "owner"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
