@@ -4,9 +4,10 @@ class CreateParties < ActiveRecord::Migration
       t.string :title
       t.string :owner
       t.timestamp :start_time
-      t.timestamp :end_time
-
+      t.timestamp :end_time	
+ 
       t.timestamps
+    
     end
   end
 
@@ -14,3 +15,4 @@ class CreateParties < ActiveRecord::Migration
     drop_table :parties
   end
 end
+  
