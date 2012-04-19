@@ -1,4 +1,8 @@
 Siteseer::Application.routes.draw do
+  resources :users
+
+  resources :posts
+
   resources :parties
 
   resources :locations

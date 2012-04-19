@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  fbId: MyString
+  fbToken: 
+
+two:
+  name: MyString
+  fbId: MyString
+  fbToken: 

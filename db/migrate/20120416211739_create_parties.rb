@@ -5,6 +5,8 @@ class CreateParties < ActiveRecord::Migration
       t.string :owner
       t.timestamp :start_time
       t.timestamp :end_time	
+
+      t.int :location_id 	
  
       t.timestamps
     

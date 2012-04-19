@@ -12,6 +12,11 @@
 </p>
 
 <p>
+  <b>Party description:</b>
+  <%= @party.description %>
+</p>
+
+<p>
   <b>Start time:</b>
   <%= @party.start_time %>
 </p>
@@ -21,7 +26,7 @@
   <%= @party.end_time %>
 </p>
 
-<h3>Nearby locations</h3>
+<h3>Party Address</h3>
 <ul>
 
   <li>  <%= @party.location.address %></li>

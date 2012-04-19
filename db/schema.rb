@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120416211739) do
+ActiveRecord::Schema.define(:version => 20120419074639) do
 
   create_table "checkins", :force => true do |t|
     t.string   "title"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(:version => 20120416211739) do
     t.datetime "end_time"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "location_id"
+    t.string   "description"
   end
 
   create_table "spatial_ref_sys", :id => false, :force => true do |t|
@@ -52,6 +54,14 @@ ActiveRecord::Schema.define(:version => 20120416211739) do
     t.integer "auth_srid"
     t.string  "srtext",    :limit => 2048
     t.string  "proj4text", :limit => 2048
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "fbId"
+    t.string   "fbToken"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
