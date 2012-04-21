@@ -12,48 +12,20 @@
   <strong>Longitude:</strong>
   <%= @location.longitude %>
 </p>
-<div id="map" style="width: 600px; height: 500px;"></div>
 
-<script type="text/javascript">
-  // Create the map
-  var map = new google.maps.Map(document.getElementById("map"), {
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  });
- 
-  // Initialize the bounds container
-  var bounds = new google.maps.LatLngBounds();
- 
-<% for location in @location.nearbys(10) %>
-    // Create the LatLng
-    var latLng = new google.maps.LatLng(<%= @location.latitude %>, <%= @location.longitude %>);
- 
-    // Create the marker
-    var marker = new google.maps.Marker({
-        position: latLng,
-        map: map,
-        title: '<%= escape_javascript(location.address) %>'
-    });
- 
-    // Add click event
-    google.maps.event.addListener(marker, 'click', function() {
-      document.location = '<%= location_path(location) %>';
-    });
- 
-    // Extend the bounds
-    bounds.extend(latLng);
-  <% end %>
- 
-  // Fit to bounds
-  map.fitBounds(bounds);
-</script>
 
 
 <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
 
-<h3>Nearby locations</h3>
+<h3>Nearby parties</h3>
 <ul>
 <% for location in @location.nearbys(10) %>
-  <li><%= link_to location.address, location %> (<%= (location.distance.to_i).round(2) %> miles)</li>
+ <%
+       unless location.parties.nil?	
+        for party in location.parties %>
+  <li><%= link_to party.title, location %> (<%= (location.distance.to_i).round(2) %> miles)</li>
+<% end %>
+<% end %>
 <% end %>
 </ul>
 <p>

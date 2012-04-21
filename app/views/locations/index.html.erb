@@ -15,9 +15,15 @@
   </tr>
   <% for location in @locations %>
     <tr>
-      <td><%= location.address %></td>
-      <td><%= location.latitude %></td>
-      <td><%= location.longitude %></td>
+    
+       <%
+       unless location.parties.nil?	
+        for party in location.parties %>
+       <td><%=party.title%></td>
+         
+
+       
+      
 	  
 	  
       <td><%= link_to "Show", location %></td>
@@ -25,6 +31,8 @@
       <td><%= link_to "Destroy", location, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
+  <% end %>
+     <% end %>
 </table>
 
 
