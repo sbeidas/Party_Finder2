@@ -21,8 +21,8 @@ class PartiesController < ApplicationController
     end
   end
   
-    # GET /parties/:long/"lat
-  # GET /parties/:long/:lat.json
+    # GET /find_party/long/lat
+  # GET/find_party/long/lat
   def show_close_parties
     
    	@l=Location.new
@@ -40,7 +40,7 @@ class PartiesController < ApplicationController
       @str=@long.to_s+" "+@lat.to_s
     @parties=Array.new
 
-     @locations =  Location.near(@str,50,:order => :distance)
+     @locations =  Location.near(@str,25,:order => :distance)
     	
     		for location in @locations
    	 unless location.parties.nil?	
