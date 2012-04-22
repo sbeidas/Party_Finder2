@@ -21,6 +21,16 @@ class PartiesController < ApplicationController
     end
   end
   
+  
+  def check_time(party)
+  	if((Time.now<=>party.start_time)==1)
+  	if((party.end_time<=>Time.now)==1)
+  			return true 
+  	end
+  	end
+else
+	return false
+  	end
     # GET /find_party/long/lat
   # GET/find_party/long/lat
   def show_close_parties
@@ -40,18 +50,18 @@ class PartiesController < ApplicationController
       @str=@long.to_s+" "+@lat.to_s
     @parties=Array.new
 
+	@timestamp
      @locations =  Location.near(@str,25,:order => :distance)
     	
     		for location in @locations
    	 unless location.parties.nil?	
    	 	 for party in location.parties
+   	if(check_time(party))
    	 	@parties.push(party)
-   	 	
+   	 end	
    	 end
    	 end
    	 end
-
-
 
 
     respond_to do |format|
