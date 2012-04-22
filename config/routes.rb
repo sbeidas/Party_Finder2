@@ -6,6 +6,8 @@ Siteseer::Application.routes.draw do
   resources :parties
 
   resources :locations
+  
+  match 'find_party/:long/:lat' => 'Parties#show_close_parties'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

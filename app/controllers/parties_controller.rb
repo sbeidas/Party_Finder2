@@ -20,6 +20,47 @@ class PartiesController < ApplicationController
       format.json  { render :json => @party }
     end
   end
+  
+    # GET /parties/:long/"lat
+  # GET /parties/:long/:lat.json
+  def show_close_parties
+    
+   	@l=Location.new
+    #@l.longitude=params[:long]
+    #@l.latitude=params[:lat]
+    #   41834134600 -87628202400
+   # @l.longitude="41.8341346+-87.62820239999999"
+
+#1000000000
+    
+   
+   @long=params[:long].to_f/1000000000
+      @lat=params[:lat].to_f/1000000000
+    
+      @str=@long.to_s+" "+@lat.to_s
+    @parties=Array.new
+
+     @locations =  Location.near(@str,50,:order => :distance)
+    	
+    		for location in @locations
+   	 unless location.parties.nil?	
+   	 	 for party in location.parties
+   	 	@parties.push(party)
+   	 	
+   	 end
+   	 end
+   	 end
+
+
+
+
+    respond_to do |format|
+      format.html # show_close_parties.html.erb
+      format.json  { render :json => @parties }
+    end
+  end
+  
+  
 
   # GET /parties/new
   # GET /parties/new.json
