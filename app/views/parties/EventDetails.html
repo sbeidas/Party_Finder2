@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Event Details</title>
+<link rel="stylesheet" href="style/default.css" />
+<link rel="stylesheet" href="style/navigation.css" />
+<link rel="stylesheet" href="style/footer.css" />
+<link rel="stylesheet" href="style/slider.css" />
+    <!--[if IE 6]>
+    <link rel="stylesheet" href="style/ie6.css" type="text/css" />
+    <![endif]-->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/easySlider1.5.js"></script>
+	<script type="text/javascript" src="js/code.js"></script>
+<style type="text/css">
+.hidden { display: none; }
+ .unhidden { display: block; }
+</style>
+</head>
+
+<body>
+<script type="text/javascript">
+ function unhide(divID) {
+ var item = document.getElementById(divID);
+ if (item) {
+ item.className=(item.className=='hidden')?'unhidden':'hidden';
+ }
+ }
+ </script>
+ <div id="wrap">
+ 	<h1>Party Finder</h1>
+ 	<div id="nav-wrap">
+						
+			</div>
+			<a href="" title="" id="app-store"></a>
+	 <div id="content">
+	 <div class="phone-demo">
+						
+						<a href="index.html">Go To Main Page</a>
+						<p></p>
+						<h2><a href="javascript:unhide('Name');">Event Name</a></h2>
+						<h2><a href="javascript:unhide('Host');">Host</a></h2>
+						<h2><a href="javascript:unhide('Time');">Time of Event</a></h2>
+						<h2><a href="javascript:unhide('Location');">Location</a></h2>
+						<h2><a href="javascript:unhide('Desc');">Description</a></h2>
+						<h2><a href="javascript:unhide('RSVP');">RSVP List</a></h2>
+			  </div>
+	 <div id="area">
+		<h2>Event Details</h2>
+
+		<div id="Name" class="unhidden">
+			<p>Event Name: This is the name of the Event. It is visible by default.</p>
+		</div>
+		<div id="Host" class="unhidden">
+			<p>Host: This is the host/hostest of the Event. It is visible by default.</p>
+		</div>
+		<div id="Time" class="unhidden">
+			<p>Time: This is the time of the Event, both the start and end time. It is visible by default.</p>
+		</div>
+		<div id="Location" class="hidden">
+			<div style = "text-align: left;">
+			<img src="http://maps.googleapis.com/maps/api/staticmap?center=41.835502,-87.625071&zoom=14&size=512x512&maptype=roadmap
+		&markers=color:red%7Clabel:A%7C41.835502,-87.625071&sensor=false" alt="" title="Google Maps-static" />
+			</div>
+			<p>This is the name of the Location of the event.
+		It includes the geographic coordinates of the event, the google map representation of the location, and the picture provided by the Host.
+		It is invisible by default.</p>
+		</div>
+		<div id="Desc" class="unhidden">
+			<p>Description: This is the description of the event provided by the Host. It is visible by default.</p>
+		</div>
+		<div id="RSVP" class="hidden">
+			<p>This is the RSVP List associated with the event. It is invisble by default.</p>
+		</div>
+	</div>
+	</div>
+</div>
+</body>
+</html>

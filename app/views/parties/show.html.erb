@@ -1,38 +1,77 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Event Details</title>
 
-<p>
-  <b>Title:</b>
-  <%= @party.title %>
-  
-</p>
+    <!--[if IE 6]>
+    <link rel="stylesheet" href="style/ie6.css" type="text/css" />
+    <![endif]-->
 
-<p>
-  <b>Owner:</b>
-  <%= @party.owner %>
-</p>
+<style type="text/css">
+.hidden { display: none; }
+ .unhidden { display: block; }
+</style>
+</head>
 
-<p>
-  <b>Party description:</b>
-  <%= @party.description %>
-</p>
+<body>
+<script type="text/javascript">
+ function unhide(divID) {
+ var item = document.getElementById(divID);
+ if (item) {
+ item.className=(item.className=='hidden')?'unhidden':'hidden';
+ }
+ }
+ </script>
+ <div id="wrap">
+ 	<h1>Party Finder</h1>
+ 	<div id="nav-wrap">
+						
+			</div>
+			<a href="" title="" id="app-store"></a>
+	 <div id="content">
+	 <div class="phone-demo">
+						
+						<a href="/parties">Go To Main Page</a>
+						<p></p>
+						<h2><a href="javascript:unhide('Name');">Event Name</a></h2>
+						<h2><a href="javascript:unhide('Host');">Host </a></h2>
+						<h2><a href="javascript:unhide('Time');">Start and End time</a></h2>
+						<h2><a href="javascript:unhide('Location');">Location</a></h2>
+						<h2><a href="javascript:unhide('Desc');">Description</a></h2>
+						<h2><a href="javascript:unhide('RSVP');">RSVP List</a></h2>
+			  </div>
+	 <div id="area">
+		<h2>Event Details</h2>
 
-<p>
-  <b>Start time:</b>
-  <%= @party.start_time %>
-</p>
+		<div id="Name" class="unhidden">
+			<p> Event Name: <u><%= @party.title %> </u></p>
+		</div>
+		<div id="Host" class="unhidden">
+			<p> <%= @party.owner %></p>
+		</div>
+		<div id="Time" class="unhidden">
+			<p>  <%= @party.start_time %> - <%= @party.start_time %> </p>
+		</div>
+		<div id="Location" class="hidden">
+			<div style = "text-align: left;">
 
-<p>
-  <b>End time:</b>
-  <%= @party.end_time %>
-</p>
 
-<h3>Party Address</h3>
-<ul>
-
-  <li>  <%= @party.location.address %></li>
-
-</ul>
-<p>
-
-<%= link_to 'Edit', edit_party_path(@party) %> |
-<%= link_to 'Back', parties_path %>
+	<p>Address:  <u><%= @party.location.address%></u></p>
+			<img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= @party.location.latitude%>,<%= @party.location.longitude%>&zoom=14&size=512x512&maptype=roadmap
+		&markers=color:red%7Clabel:A%7C41.835502,-87.625071&sensor=false" alt="" title="Google Maps-static" />
+			</div>
+		
+		</div>
+		<div id="Desc" class="unhidden">
+			<p>  <%= @party.description %></p>
+		</div>
+		<div id="RSVP" class="hidden">
+			<p>This is the RSVP List associated with the event. It is invisble by default.</p>
+		</div>
+	</div>
+	</div>
+</div>
+</body>
+</html>

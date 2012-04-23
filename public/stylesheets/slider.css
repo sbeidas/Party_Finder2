@@ -1,0 +1,38 @@
+img{border:none;}
+#slidehold{position:absolute;left:30px;top:99px;z-index:10;}
+#slider{}	
+#slider ul, #slider li, #slider2 ul, #slider2 li{
+margin:0;padding:0;
+list-style:none;
+}
+#slider li, #slider2 li{ 
+width:208px;
+height:311px;
+overflow:hidden; 
+}	
+p#controls, p#controls2{
+margin:0;
+position:relative;
+} 
+#prevBtn, #nextBtn, #prevBtn2, #nextBtn2{ 
+display:block;
+margin:0;
+overflow:hidden;
+text-indent:-8000px;		
+width:104px;height:311px;
+position:absolute;
+left:0;top:-311px;
+}	
+#nextBtn, #nextBtn2{left:104px;}														
+#prevBtn a, #nextBtn a, #prevBtn2 a, #nextBtn2 a{  
+display:block;
+width:104px;height:311px;
+}	
+#prevBtn a:hover, #nextBtn a:hover, #nextBtn2 a:hover{background:url(../images/btn_prev.png) no-repeat left top;}									
+#nextBtn a:hover, #nextBtn2 a:hover{background:url(../images/btn_next.png) no-repeat left top;}
+
+.phone-demo{
+position:relative;
+width:269px;height:533px;
+left:115px; top:10px;
+}

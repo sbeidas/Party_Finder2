@@ -1,0 +1,72 @@
+
+/*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*/
+
+#foot{
+clear:left;
+width:100%;
+color:#000;
+padding:0 0 20px 0;
+background-color:#637790;
+margin-top:15px;
+font-size:0.8em;
+float:left;
+display:inline;
+}
+h3{
+color:#000;
+font-weight:bold;
+font-size:1.4em;
+padding-bottom:7px;
+}
+h3 a{
+color:#000;
+font-weight:bold;
+}
+#foot a.foota{
+color:#000;
+padding-left:10px;
+font-weight:normal;
+}
+#foot p{color:#fff;}
+#foot ul.footlist{
+padding:18px 0 0 0;
+margin:0 auto;
+width:985px;
+}
+#foot li{
+padding:0 0 2px 0;
+margin:0;
+line-height:1.3em;
+}
+#foot ul.footlist li.footis{
+width:260px;
+padding:0 26px 0 34px;
+display:inline;
+float:left;
+}
+#foot ul.footlist li.footis p{line-height:1.5em;}
+#foot ul.footlist li.footis p a{
+font-weight:normal;
+color:#000;
+}
+#foot ul.footlist li.footis ul{padding-top:15px;}
+#foot ul.footlist li.footis ul.ulb{padding-top:5px;}
+#foot ul.footlist li.footis ul li{
+color:#202020;
+padding:0 5px 13px 25px;
+width:228px;
+list-style-type:none;
+background:url(../images/bullet/foot-bullet-plus.gif) no-repeat left 1px;
+}
+#foot ul.footlist li.footis ul li a{
+font-weight:normal;
+font-style:italic;
+color:#202020;
+}
+#foot ul.footlist li.footis a:active{color:#fff;}
+#foot .smallp{
+padding:30px 0 10px 30px;
+margin:0 auto;
+width:950px;
+font-size:0.75em;
+}
