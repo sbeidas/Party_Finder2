@@ -60,7 +60,7 @@
 
 	<p>Address:  <u><%= @party.location.address%></u></p>
 			<img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= @party.location.latitude%>,<%= @party.location.longitude%>&zoom=14&size=512x512&maptype=roadmap
-		&markers=color:red%7Clabel:A%7C41.835502,-87.625071&sensor=false" alt="" title="Google Maps-static" />
+		&markers=color:red%7Clabel:A%7C<%= @party.location.latitude%>,<%= @party.location.longitude%>&sensor=false" alt="" title="Google Maps-static" />
 			</div>
 		
 		</div>
