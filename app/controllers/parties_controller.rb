@@ -47,11 +47,11 @@ else
    @long=params[:long].to_f/1000000000
       @lat=params[:lat].to_f/1000000000
     
-      @str=@long.to_s+" "+@lat.to_s
+      @str=@lat.to_s+" "+@long.to_s
     @parties=Array.new
 
 	@timestamp
-     @locations =  Location.near(@str,500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,:order => :distance)
+     @locations =  Location.near(@str,500000000000000000000000000000000000,:order => :distance)
     	
     		for location in @locations
    	 unless location.parties.nil?	
