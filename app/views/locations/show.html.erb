@@ -24,7 +24,7 @@
  <%
        unless location.parties.nil?	
         for party in location.parties %>
-  <li><%= link_to party.title, location %> (<%= (location.distance.to_i).round(2) %> miles)</li>
+  <li><%= link_to party.title, location %> (<%= (location.distance.to_i).round(50) %> miles)</li>
 <% end %>
 <% end %>
 <% end %>
