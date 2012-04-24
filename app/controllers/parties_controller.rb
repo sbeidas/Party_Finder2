@@ -51,7 +51,7 @@ else
     @parties=Array.new
 
 	@timestamp
-     @locations =  Location.near(@str,500000000000000000000000000000000000,:order => :distance)
+     @locations =  Location.near(@str,5000000000000000000000000000000000000000000000000000000	,:order => :distance)
     	
     		for location in @locations
    	 unless location.parties.nil?	
