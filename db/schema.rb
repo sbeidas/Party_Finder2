@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20120419074639) do
     t.datetime "updated_at"
     t.integer  "location_id"
     t.string   "description"
+    t.integer  "user_id"
   end
 
   create_table "spatial_ref_sys", :id => false, :force => true do |t|
